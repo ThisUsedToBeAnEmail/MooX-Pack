@@ -7,6 +7,7 @@ use Test::More;
 plan tests => 1;
 
 BEGIN {
+    use_ok('Moo');
     use_ok( 'MooX::Pack' ) || print "Bail out!\n";
 }
 

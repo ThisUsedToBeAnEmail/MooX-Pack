@@ -3,9 +3,13 @@ use warnings;
 
 use Test::More;
 
-use t::Classes::Test;
+use t::Packme::Test;
 
-my $thing = t::Classes::Test->new(data => 'Date      |Description                | Income|Expenditure');
+my $original_string =  'Date      |Description                | Income|Expenditure'; 
+
+my $test = t::Packme::Test->new(data => $original_string);
+
+is($test->data, $original_string, "data is set");
 
 use Data::Dumper;
 warn Dumper $thing->unpack;

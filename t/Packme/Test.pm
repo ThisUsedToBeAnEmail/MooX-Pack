@@ -1,4 +1,4 @@
-package t::Classes::Test;
+package t::Packme::Test;
 
 use Moo;
 use MooX::Pack;
