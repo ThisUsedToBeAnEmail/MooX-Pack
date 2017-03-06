@@ -8,6 +8,12 @@ has data => (
     lazy => 1,
 );
 
+has [qw/line_spec all_spec/] => (
+    is => 'ro',
+    builder => 1,
+);
+
+=pod
 has [qw/pack_string pack_templates raw_data/] => (
     is => 'rw',
     lazy => 1,
@@ -79,5 +85,7 @@ sub pack {
 
     return join "\n", @packing;  
 }
+
+=cut
 
 1;
