@@ -70,10 +70,7 @@ sub import {
     my $aspec = {};
     my $option = sub {
         my ( $name, %attributes ) = @_;
-        if (!$aspec->{$name}) { 
-            $aspec->{$name} = [ ];
-        }
-        push @{ $aspec->{$name} }, \%attributes;
+        $aspec->{$name} = \%attributes;
         $around->(
             "_build_all_spec" => sub {
                 my ( $orig, $self ) = ( shift, shift );
